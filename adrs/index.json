@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ADR-001",
+    "file": "adr-001-mqtt-vs-wifi-edge-strategy.md",
+    "title": "Local MQTT messaging with explicit connectivity",
+    "requirements": "R09, R10, R11",
+    "diagram": "D03",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-002",
+    "file": "adr-002-store-and-forward-edge-storage.md",
+    "title": "Durable outbox, final receipts and bounded replay",
+    "requirements": "R09, R10",
+    "diagram": "D05",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-003",
+    "file": "adr-003-exclusion-of-genai-from-pricing-and-safety.md",
+    "title": "Separate AI advice from consequential execution",
+    "requirements": "R03, R04, R05, R12",
+    "diagram": "D14",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-004",
+    "file": "adr-004-vendor-agnostic-ai-gateway.md",
+    "title": "Versioned AI adapter with evaluated fallback and spend limits",
+    "requirements": "R08, R12",
+    "diagram": "D08",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-005",
+    "file": "adr-005-predictive-maintenance-traditional-ml.md",
+    "title": "Conditional tabular ML for advisory maintenance",
+    "requirements": "R02, R07, R12",
+    "diagram": "D09",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-006",
+    "file": "adr-006-human-in-the-loop-animal-care.md",
+    "title": "Task-specific human authority for animal-care actions",
+    "requirements": "R03, R04, R05",
+    "diagram": "D06",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-007",
+    "file": "adr-007-system-boundaries-and-build-buy.md",
+    "title": "Modular estate core and bought commodity capabilities",
+    "requirements": "R01, R07, R12",
+    "diagram": "D02",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-008",
+    "file": "adr-008-offline-ticketing-and-reconciliation.md",
+    "title": "Signed entitlements and local redemption authority",
+    "requirements": "R01, R06, R09",
+    "diagram": "D04",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-009",
+    "file": "adr-009-operational-data-and-event-contracts.md",
+    "title": "Operational stores with transactional events and derived analytics",
+    "requirements": "R01, R03, R04, R05, R10",
+    "diagram": "D05",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-010",
+    "file": "adr-010-grounded-assistant-and-evaluation.md",
+    "title": "Grounded visitor help with evaluated changes",
+    "requirements": "R08, R12",
+    "diagram": "D08",
+    "status": "Accepted architecture decision"
+  },
+  {
+    "id": "ADR-011",
+    "file": "adr-011-population-and-feeding-monitoring.md",
+    "title": "Keeper-confirmed records with conditional animal-monitoring AI",
+    "requirements": "R03, R04, R05",
+    "diagram": "D07",
+    "status": "Accepted architecture decision"
+  }
+]

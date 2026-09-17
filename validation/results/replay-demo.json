@@ -1,0 +1,11 @@
+{
+  "accepted_events": 20,
+  "destination_effects_after_first_delivery": 20,
+  "pending_after_two_lost_receipts": 2,
+  "pending_after_retry": 0,
+  "destination_final": {
+    "inbox": 20,
+    "effects": 20
+  },
+  "scope": "Local SQLite software experiment; no network, MQTT, power-cut, model or field proof."
+}

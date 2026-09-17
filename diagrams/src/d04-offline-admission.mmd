@@ -1,0 +1,26 @@
+sequenceDiagram
+ participant G as Gate validator
+ participant A as Authority or spare
+ participant J as Redemption journal
+ participant O as Recovery operator
+ G->>G: Verify signature and entitlement
+ alt Local authority reachable
+ G->>A: Request ID, party, generation
+ A->>J: Atomic allowance check and append
+ J-->>A: Committed or previous decision
+ A-->>G: Decision at matching generation
+ else Authority failed
+ Note over G,O: Operations lead authorizes recovery; staffed exceptions
+ O->>A: Physically fence former writer
+ O->>J: Restore and reconcile acknowledged decisions
+ J-->>O: Completeness known or unknown
+ alt Fence and journal verified
+ O->>A: Configure next generation
+ O->>G: Authenticated enrollment; persist generation
+ Note over G,A: Spare allowlists only updated validators
+ G->>A: Redeem with new generation
+ A-->>G: Matching generation decision
+ else State or fence uncertain
+ Note over G,O: Automatic redemption stays disabled
+ end
+ end

@@ -1,0 +1,20 @@
+# AI operation, monitoring and incident response
+
+### Production AI monitoring and response
+
+The model/knowledge owner is accountable during estate opening hours; the operations lead can disable the AI feature. The first public pilot uses one reviewed model configuration, a small canary audience and a feature switch back to search. Model changes do not silently receive the previous model's approval. Read-only access and deterministic checks remain active during monitoring.
+
+| Signal and proposed trigger | Detection and owner | Response |
+|---|---|---|
+| Any confirmed privacy, authority or consequential constraint violation in displayed output | Visitor reports, policy logs and daily reviewer sample; model/knowledge owner | Disable the affected AI path immediately; preserve minimal evidence; determine whether model, content or application policy caused it; evaluate before re-enabling |
+| Invalid-candidate/fallback rate above 20% across the last 50 model requests, or more than twice the frozen evaluation baseline when that is at least 5% | Rolling request metrics; platform owner | Investigate retrieval, source expiry and provider changes; use search while errors persist. Low volumes receive manual review rather than a noisy rate alert |
+| Plausible but unhelpful recommendations | Review ten randomly sampled accepted recommendations per operating day, or all if fewer; all reported failures; visitor product owner | Check intent, sources, confirmed constraints and task outcome; two major task failures in the daily sample pause the canary for investigation |
+| Stale/withdrawn knowledge or revoked approval | Expiry checks and knowledge publishing audit; knowledge owner | Exclude affected content, invalidate its caches and restore approved information; a model rollback cannot fix incorrect source data |
+| Repeated timeout, malformed response, 429 or 5xx | Five consecutive provider failures; platform owner | Open a proposed five-minute circuit, serve search, then try one controlled probe; provider calls still obey deadline and budget rules |
+| Cost forecast exceeds allocation, published price changes, or usage cannot be reconciled | Daily usage reconciliation and price/configuration check; platform owner | Update the versioned reservation price before more calls; unknown maximum cost disables calls; reduce scope/call volume rather than silently raise the cap |
+| Provider shutdown or unsupported API/model | Failed contract check or provider notice; platform owner | Continue search; revoke unused credentials and promote a replacement only after the full evaluation contract; automatic unevaluated substitution is prohibited |
+| Animal/maintenance model outside reviewed conditions, rising false alerts or growing review backlog | Reviewed outcomes, coverage and per-shift workload; relevant domain lead | Suspend advisory model, preserve qualified manual/threshold workflow; recalibrate/review data before shadow promotion |
+
+These are proposed operational triggers, not achieved service levels. Validate their workload and sensitivity in the pilot. Correlate model/prompt/corpus/policy versions with outcomes. Store only the approved diagnostic fields needed for the seven-day review window; redact personal/free-text content and keep any incident evidence under the separate records policy. Deterministic rejection rates detect one class of failure; human review and task outcomes catch confidently irrelevant but structurally valid selections. Animal and maintenance limits are fixed by the responsible domain owner before held-out evaluation, not selected after seeing favourable results.
+
+Weekly, the model/knowledge owner reviews sampled failures, fallback rate, task outcomes, latency and cost with operations. A correction becomes a regression case and reruns the affected evaluation plus critical policy cases. A severe incident does not wait for that meeting. During cloud/model failure, established care and admission procedures remain authoritative; no incident process grants the model new powers.

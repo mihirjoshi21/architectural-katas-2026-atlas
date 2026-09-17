@@ -1,0 +1,114 @@
+[
+  {
+    "id": "d01-context",
+    "title": "ATLAS in its operating environment",
+    "type": "C4 system context",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1175
+  },
+  {
+    "id": "d02-containers",
+    "title": "Application responsibilities and data ownership",
+    "type": "C4 container view",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1635
+  },
+  {
+    "id": "d03-edge-deployment",
+    "title": "Failure domains and physical deployment",
+    "type": "Deployment topology",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1425
+  },
+  {
+    "id": "d04-offline-admission",
+    "title": "Admission and fenced authority recovery",
+    "type": "UML sequence",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1985
+  },
+  {
+    "id": "d05-store-forward",
+    "title": "Lost receipt: retry identity, never repeat the effect",
+    "type": "UML sequence",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1585
+  },
+  {
+    "id": "d06-care-workflow",
+    "title": "Authorization is separate from physical outcome",
+    "type": "UML state model",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1715
+  },
+  {
+    "id": "d07-animal-monitoring",
+    "title": "Animal observations: estimate, review, confirm",
+    "type": "Activity swimlanes",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1625
+  },
+  {
+    "id": "d08-visitor-assistant",
+    "title": "Candidate selection, checked facts and controlled presentation",
+    "type": "Data-flow and trust view",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1685
+  },
+  {
+    "id": "d09-maintenance-ml",
+    "title": "Model lifecycle: offline evidence before live advice",
+    "type": "ML lifecycle / release gate",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1435
+  },
+  {
+    "id": "d10-context-map",
+    "title": "Business boundaries and published contracts",
+    "type": "Domain context map",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1225
+  },
+  {
+    "id": "d11-popularity",
+    "title": "From observations to accountable staff decisions",
+    "type": "Data lineage",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1305
+  },
+  {
+    "id": "d12-roadmap",
+    "title": "Delivery gates across the three-year horizon",
+    "type": "Phased timeline",
+    "mermaid": true,
+    "width": 1600,
+    "height": 1215
+  },
+  {
+    "id": "d13-operator-views",
+    "title": "Information that supports the next decision",
+    "type": "Low-fidelity wireframes",
+    "mermaid": false,
+    "width": 1600,
+    "height": 1365
+  },
+  {
+    "id": "d14-authority",
+    "title": "Who can do what?",
+    "type": "Authority matrix",
+    "mermaid": false,
+    "width": 1600,
+    "height": 1255
+  }
+]

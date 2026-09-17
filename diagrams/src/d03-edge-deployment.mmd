@@ -1,0 +1,13 @@
+flowchart TB
+ subgraph Estate["Estate local power and LAN"]
+ S["Sensors"] -->|"MQTT on local link"| E["Gateway"]
+ E --> DB[("SQLite pending and archive")]
+ K["Staff kiosk"] -->|"Capture only"| E
+ G["Gate validators"] -->|"Admission LAN"| A["Authority on protected host"]
+ end
+ subgraph Cloud["Managed cloud region"]
+ I["Application and ingestion"] --> P[("PostgreSQL with PITR")]
+ P --> O[("Backups and object storage")]
+ end
+ E -->|"Authenticated HTTPS across WAN"| I
+ A -->|"Admission synchronization"| I

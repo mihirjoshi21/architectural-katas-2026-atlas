@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-09-17T03:44:32.163194+00:00",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "system": "Linux",
+  "scope": "Executed local replay and deterministic visitor-policy checks; synthetic fixture integrity; cost arithmetic; repository structure. No LLM calls, model quality, user studies, field reliability or integrated authority recovery are claimed.",
+  "runs": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/tests",
+        "-p",
+        "test_edge_replay.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "validation/results/unit-tests.txt"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/tests",
+        "-p",
+        "test_visitor_policy.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "validation/results/visitor-policy-tests.txt"
+    },
+    {
+      "command": [
+        "python",
+        "spikes/edge-replay/demo.py"
+      ],
+      "exit_code": 0,
+      "output": "validation/results/replay-demo.json"
+    },
+    {
+      "command": [
+        "python",
+        "validation/scripts/check_visitor_fixtures.py"
+      ],
+      "exit_code": 0,
+      "output": "validation/results/visitor-fixture-checks.txt"
+    },
+    {
+      "command": [
+        "python",
+        "validation/scripts/calculate_costs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": "validation/results/cost-check.txt"
+    },
+    {
+      "command": [
+        "python",
+        "validation/scripts/check_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "validation/results/repository-checks.txt"
+    }
+  ],
+  "source_sha256": {
+    "spikes/edge-replay/demo.py": "d5c44c4dd9e39371f53f95b0205dc34e246cb8bce1ba56aa7450ca67ae7a17bf",
+    "spikes/edge-replay/replay.py": "b93a10694da817c0f6f768f630e7f147f26155d467fd2382dd1fe3c93996b8b7",
+    "spikes/visitor-policy/policy.py": "7426dd72b694bc0c72eddb47695c8b9c461bf13b0adda11238a86f3c18a6a648",
+    "validation/scripts/calculate_costs.py": "8739e4e95118399a424589420b3be086b4a9a737db0440481ce3291b9834eb65",
+    "validation/scripts/check_repository.py": "b6d4ee2498275b79314efac8197b740ded527155b66336bb8ccac56607684951",
+    "validation/scripts/check_visitor_fixtures.py": "79d1b46305bc18c9d49113d6af80e410afb37a0e4af24376e4db6f3f5e9b8ec4",
+    "validation/tests/test_edge_replay.py": "a5d95eac1082fec39122a3c5d142e82fef69a07b0671d872536ffa2b4ce7bc67",
+    "validation/tests/test_visitor_policy.py": "fae90e1eba0a940abff6e155fd7a52bb0a2b4acc9c2bec27cfb4920b50e0d7d1"
+  },
+  "fixture_sha256": {
+    "validation/datasets/visitor-fixture.json": "18d5b427f087182827f35b9b24d72a0da49044c35ddd6d8583be524cfab1a8a4",
+    "validation/datasets/visitor-scenario-specifications.json": "2616f5e06df0eca5897a142abab66bfe7819a668ba4c78a7d670e743f09df9db"
+  }
+}

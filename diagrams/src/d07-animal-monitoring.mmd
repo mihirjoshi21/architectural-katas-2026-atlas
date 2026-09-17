@@ -1,0 +1,23 @@
+flowchart TB
+ subgraph Capture
+ O["Observation or permitted footage"]
+ L["Reviewed labels"]
+ end
+ subgraph Analytics
+ Q{"Capture usable?"}
+ M["Rules or visible-count candidate"]
+ E[("Separate estimate and uncertainty")]
+ end
+ subgraph Keeper
+ H["Manual observation"]
+ R["Review discrepancy; total requires independent reference"]
+ C[("Confirmed records")]
+ end
+ O --> Q
+ Q -->|"Yes"| M
+ Q -->|"No"| H
+ M --> E
+ M --> R
+ H --> R
+ R --> C
+ R --> L

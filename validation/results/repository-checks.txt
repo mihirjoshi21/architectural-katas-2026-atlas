@@ -1,0 +1,2 @@
+PASS: 39 Markdown files, 220 local links, 14 diagrams with editable draw.io/SVG/PNG, 11 ADRs, 12 requirement rows.
+Limits: remote links, browser rendering, custom diagram semantic equivalence and architectural correctness require review.

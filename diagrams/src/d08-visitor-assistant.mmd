@@ -1,0 +1,14 @@
+flowchart TB
+ U["Untrusted visitor request"] --> P["Permissions, rate and cost reservation"]
+ subgraph Estate["Estate policy boundary"]
+ P --> A["Versioned AI adapter"]
+ K[("Approved knowledge")] --> A
+ F["Authoritative facts and confirmed constraints"] --> A
+ V["Deterministic ID, source and constraint checks"] -->|"Pass"| R["Approved fact cards or excerpts"]
+ V -->|"Fail"| B["Approved search or staff help"]
+ F --> V
+ end
+ A -->|"Bounded call"| M["External model"]
+ M -->|"Candidate IDs and source references"| V
+ P -->|"Unavailable or denied"| B
+ R -.-> N["Sampled monitoring and feature switch"]

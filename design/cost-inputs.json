@@ -1,0 +1,208 @@
+{
+  "status": "Illustrative planning assumptions; not vendor quotes or measured returns",
+  "currency": "EUR",
+  "horizon_months": 36,
+  "contingency_rate": 0.2,
+  "one_off": [
+    {
+      "item": "Devices, gateways, networking and spares",
+      "quantity": 1,
+      "unit_cost": 34750
+    },
+    {
+      "item": "Software delivery person-days",
+      "quantity": 180,
+      "unit_cost": 650
+    },
+    {
+      "item": "Installation person-days",
+      "quantity": 30,
+      "unit_cost": 450
+    },
+    {
+      "item": "Training person-days",
+      "quantity": 12,
+      "unit_cost": 450
+    },
+    {
+      "item": "Data preparation person-days",
+      "quantity": 30,
+      "unit_cost": 350
+    },
+    {
+      "item": "Specialist review person-days",
+      "quantity": 10,
+      "unit_cost": 800
+    }
+  ],
+  "monthly": [
+    {
+      "item": "Cloud application, database, backups",
+      "amount": 1200
+    },
+    {
+      "item": "Event ingestion and storage",
+      "amount": 450
+    },
+    {
+      "item": "AI usage allowance",
+      "amount": 650
+    },
+    {
+      "item": "Cellular backhaul",
+      "amount": 350
+    },
+    {
+      "item": "Support and operations allocation",
+      "amount": 4500
+    },
+    {
+      "item": "Replacement reserve",
+      "amount": 300
+    },
+    {
+      "item": "Service licenses",
+      "amount": 250
+    }
+  ],
+  "sensitivity_factors": {
+    "lower_cost": 0.8,
+    "base": 1.0,
+    "higher_cost": 1.4
+  },
+  "benefit_scenarios": [
+    {
+      "name": "Low illustrative contribution",
+      "monthly_incremental_contribution": 5000
+    },
+    {
+      "name": "Middle illustrative contribution",
+      "monthly_incremental_contribution": 12000
+    },
+    {
+      "name": "High illustrative contribution",
+      "monthly_incremental_contribution": 18000
+    }
+  ],
+  "benefit_start_month": 13,
+  "capacity": {
+    "sensors": 350,
+    "sample_interval_seconds": 10,
+    "average_event_bytes": 500,
+    "outage_hours": 72,
+    "gateways": 25,
+    "storage_headroom_factor": 2,
+    "visitors_per_day": 15000,
+    "open_hours_per_day": 10,
+    "api_calls_per_visit": 20,
+    "burst_factor": 10,
+    "admission_lanes": 12,
+    "seconds_per_admission": 5,
+    "arrival_window_hours": 1,
+    "raw_vibration_sensors": 40,
+    "raw_vibration_axes": 3,
+    "raw_vibration_bytes_per_axis": 2,
+    "raw_vibration_hz": 1000,
+    "recovery_archive_days": 7,
+    "timed_entry_people_per_slot": 1500,
+    "slot_minutes": 15
+  },
+  "pilot": {
+    "duration_months": 2,
+    "hardware_allocation": 5750,
+    "person_days": [
+      {
+        "item": "Delivery",
+        "quantity": 25,
+        "unit_cost": 650
+      },
+      {
+        "item": "Installation",
+        "quantity": 5,
+        "unit_cost": 450
+      },
+      {
+        "item": "Training",
+        "quantity": 2,
+        "unit_cost": 450
+      },
+      {
+        "item": "Data preparation",
+        "quantity": 5,
+        "unit_cost": 350
+      },
+      {
+        "item": "Specialist review",
+        "quantity": 2,
+        "unit_cost": 800
+      }
+    ],
+    "monthly_run_cost": 1800,
+    "contingency_rate": 0.2,
+    "relationship_to_full_envelope": "Allocation within the full program; do not add pilot cost a second time",
+    "packages": [
+      {
+        "name": "Operational foundation",
+        "hardware": 4750,
+        "delivery_days": 18,
+        "installation_days": 4,
+        "training_days": 2,
+        "data_days": 3,
+        "specialist_days": 1,
+        "monthly_run_cost": 1620
+      },
+      {
+        "name": "Visitor assistant experiment",
+        "hardware": 0,
+        "delivery_days": 6,
+        "installation_days": 0,
+        "training_days": 0,
+        "data_days": 2,
+        "specialist_days": 0.5,
+        "monthly_run_cost": 120
+      },
+      {
+        "name": "Camera feasibility experiment",
+        "hardware": 1000,
+        "delivery_days": 1,
+        "installation_days": 1,
+        "training_days": 0,
+        "data_days": 0,
+        "specialist_days": 0.5,
+        "monthly_run_cost": 60
+      }
+    ]
+  },
+  "staged_operation": [
+    {
+      "months": 2,
+      "monthly_cost": 1800,
+      "one_off_allocation": 34200,
+      "stage": "Pilot: months 1\u20132"
+    },
+    {
+      "months": 2,
+      "monthly_cost": 3000,
+      "one_off_allocation": 50000,
+      "stage": "Foundation: months 3\u20134"
+    },
+    {
+      "months": 4,
+      "monthly_cost": 4500,
+      "one_off_allocation": 60000,
+      "stage": "Insight: months 5\u20138"
+    },
+    {
+      "months": 4,
+      "monthly_cost": 6000,
+      "one_off_allocation": 50000,
+      "stage": "AI release gates: months 9\u201312"
+    },
+    {
+      "months": 24,
+      "monthly_cost": 7700,
+      "one_off_allocation": 32780,
+      "stage": "Conditional expansion: months 13\u201336"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+flowchart TB
+ subgraph Visitor["Visitor and Admissions"]
+ V["Entitlements and redemption"]
+ VE["AdmissionRecorded and ExitRecorded"]
+ V --> VE
+ end
+ subgraph Park["Park Operations"]
+ P["Ride status, zones and work orders"]
+ PE["RideStatusChanged and ZoneObservationRecorded"]
+ P --> PE
+ end
+ subgraph Care["Animal Care"]
+ C["Feeding, population and care tasks"]
+ CE["PopulationConfirmed and CareActionCompleted"]
+ C --> CE
+ end

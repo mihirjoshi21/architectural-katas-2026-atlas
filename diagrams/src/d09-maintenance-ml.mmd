@@ -1,0 +1,11 @@
+flowchart TB
+ subgraph Offline["Offline development"]
+ D[("Reviewed telemetry and outcomes")] --> F["Versioned features and time/asset split"]
+ F --> M["Candidate model"]
+ M --> G{"Held-out benefit and error gate"}
+ B["Inspection and threshold baseline"] --> G
+ G -->|"Fail"| X["Reject or improve data"]
+ end
+ G -->|"Human promotion"| S["Shadow trial"]
+ S --> H["Mechanic reviews advisory evidence"]
+ H --> R["Monitor workload and rollback"]

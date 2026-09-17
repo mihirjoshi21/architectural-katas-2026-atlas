@@ -1,0 +1,1 @@
+PASS: 48 synthetic cases; concrete fixtures, overrides and source references resolve. No model evaluation executed.

@@ -1,0 +1,216 @@
+{
+  "status": "Synthetic architecture fixture; not actual estate information or a model result",
+  "now": "2026-09-18T14:00:00Z",
+  "corpus_version": "synthetic-v1",
+  "freshness_seconds": 120,
+  "documents": [
+    {
+      "text": "On the synthetic visit date the estate opens at 09:00 and closes at 18:00.",
+      "facts": {
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "id": "doc-hours",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/hours"
+    },
+    {
+      "text": "Synthetic Family Day covers two adults and up to three children for one date. Split arrivals redeem remaining allowance through the same entrance authority. Prices appear only in the authorized checkout.",
+      "facts": {
+        "adults": 2,
+        "children_max": 3,
+        "split_arrivals": "same_authority"
+      },
+      "id": "doc-passes",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/passes"
+    },
+    {
+      "text": "Buy and renew through the official ticket checkout. Card details and refund status are handled by the authenticated supplier portal.",
+      "facts": {
+        "purchase_route": "/tickets",
+        "renew_route": "/passes/renew",
+        "refund_route": "/account/refunds"
+      },
+      "id": "doc-purchase",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/purchase"
+    },
+    {
+      "text": "A1 is the Aquarium Gallery; A2 is the Conservatory; R1 is the Heritage Wheel; R2 is the Tower Ride.",
+      "facts": {
+        "A1": "Aquarium Gallery",
+        "A2": "Conservatory",
+        "R1": "Heritage Wheel",
+        "R2": "Tower Ride"
+      },
+      "id": "doc-exhibits",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/exhibits"
+    },
+    {
+      "text": "Accessible toilets, drinking water and the staffed help desk are at the main entrance. Lost property is reported at that desk.",
+      "facts": {
+        "toilets": "main entrance",
+        "water": "main entrance",
+        "help": "main entrance",
+        "lost_property": "help desk"
+      },
+      "id": "doc-facilities",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/facilities"
+    },
+    {
+      "text": "A1 and A2 have reviewed step-free routes from the main entrance. A1 takes 20 minutes including the route; A2 takes 25 minutes. R1 requires transfer from a wheelchair. R2 has a 120 cm minimum height. Unknown routes have no verified access classification.",
+      "facts": {
+        "A1": {
+          "step_free": true,
+          "minutes": 20
+        },
+        "A2": {
+          "step_free": true,
+          "minutes": 25
+        },
+        "R1": {
+          "step_free": false
+        },
+        "R2": {
+          "minimum_height_cm": 120
+        }
+      },
+      "id": "doc-access",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/access"
+    },
+    {
+      "text": "A2 offers a designated lower-sensory session at 14:00. Historical zone counts are not a live crowd guarantee.",
+      "facts": {
+        "lower_sensory_activity": "A2",
+        "session": "14:00"
+      },
+      "id": "doc-quiet",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/quiet"
+    },
+    {
+      "text": "The entrance cafe lists sandwiches and soup as example categories. Exact daily dishes are not published here. Severe allergies must be discussed directly with cafe staff; the assistant cannot guarantee suitability.",
+      "facts": {
+        "location": "main entrance",
+        "categories": [
+          "sandwiches",
+          "soup"
+        ]
+      },
+      "id": "doc-food",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/food"
+    },
+    {
+      "text": "A1 and A2 are indoor activities, subject to current opening status. No current weather feed is available.",
+      "facts": {
+        "indoor": [
+          "A1",
+          "A2"
+        ]
+      },
+      "id": "doc-weather",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/weather"
+    },
+    {
+      "text": "The visitor bus stop and signed pedestrian approach lead to the main entrance. Live transport departures are unavailable.",
+      "facts": {
+        "bus_stop": "main entrance"
+      },
+      "id": "doc-transport",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/transport"
+    },
+    {
+      "text": "English is the initial supported interface. Spanish, French, German and Hindi are evaluation candidates, disabled for public use until reviewed. Other languages use the published English information and human help.",
+      "facts": {
+        "public": [
+          "en"
+        ],
+        "trial": [
+          "es",
+          "fr",
+          "de",
+          "hi"
+        ]
+      },
+      "id": "doc-languages",
+      "version": 1,
+      "approved": true,
+      "expires_at": "2026-09-19T00:00:00Z",
+      "source_uri": "fixture://approved/languages"
+    }
+  ],
+  "activities": {
+    "A1": {
+      "name": "Aquarium Gallery",
+      "status": "open",
+      "observed_at": "2026-09-18T13:59:30Z",
+      "step_free": true,
+      "duration_minutes": 20,
+      "source_id": "doc-access",
+      "source_version": 1
+    },
+    "A2": {
+      "name": "Conservatory",
+      "status": "closed",
+      "observed_at": "2026-09-18T13:59:30Z",
+      "step_free": true,
+      "duration_minutes": 25,
+      "source_id": "doc-access",
+      "source_version": 1
+    },
+    "R1": {
+      "name": "Heritage Wheel",
+      "status": "open",
+      "observed_at": "2026-09-18T13:59:30Z",
+      "step_free": false,
+      "duration_minutes": 25,
+      "source_id": "doc-access",
+      "source_version": 1
+    },
+    "R2": {
+      "name": "Tower Ride",
+      "status": "closed",
+      "observed_at": "2026-09-18T13:59:30Z",
+      "step_free": false,
+      "duration_minutes": 20,
+      "minimum_height_cm": 120,
+      "source_id": "doc-access",
+      "source_version": 1
+    }
+  },
+  "permissions": [
+    "public_information_read"
+  ],
+  "live_queue": null,
+  "private_bookings": null,
+  "refunds": null,
+  "budget_available": true,
+  "provider_available": true
+}

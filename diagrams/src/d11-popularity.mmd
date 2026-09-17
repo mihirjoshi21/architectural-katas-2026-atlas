@@ -1,0 +1,7 @@
+flowchart TB
+ O["Bidirectional entries and manual calibration"] --> Q{"Calibrated and coverage at least 90 percent?"}
+ Q -->|"Yes"| A[("Entries per covered operating hour")]
+ Q -->|"No"| M["Missing or stale data visible"]
+ A --> D["Manager records staff decision and reason"]
+ M --> D
+ D --> E["Compare outcomes and seasonality"]

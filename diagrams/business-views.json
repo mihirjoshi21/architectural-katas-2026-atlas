@@ -1,0 +1,37 @@
+[
+  {
+    "id": "v01-atlas-overview",
+    "png": "rendered/v01-atlas-overview.png",
+    "source": "Supplied Miro view"
+  },
+  {
+    "id": "v02-visitor-experience",
+    "png": "rendered/v02-visitor-experience.png",
+    "source": "Supplied Miro view"
+  },
+  {
+    "id": "v03-keeper-experience",
+    "png": "rendered/v03-keeper-experience.png",
+    "source": "Supplied Miro view"
+  },
+  {
+    "id": "v04-popularity-decision",
+    "png": "rendered/v04-popularity-decision.png",
+    "source": "Supplied Miro view"
+  },
+  {
+    "id": "v05-pilot-and-expansion",
+    "png": "rendered/v05-pilot-and-expansion.png",
+    "source": "html/v05-pilot-and-expansion.html"
+  },
+  {
+    "id": "v06-care-domain-events",
+    "png": "rendered/v06-care-domain-events.png",
+    "source": "html/v06-care-domain-events.html"
+  },
+  {
+    "id": "v07-investment-scorecard",
+    "png": "rendered/v07-investment-scorecard.png",
+    "source": "html/v07-investment-scorecard.html"
+  }
+]

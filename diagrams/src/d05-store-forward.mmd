@@ -1,0 +1,17 @@
+sequenceDiagram
+ participant S as Source
+ participant E as Edge outbox
+ participant C as Cloud ingestion
+ participant D as Inbox and effect
+ S->>E: Stable ID and payload
+ E->>E: Durable commit
+ E-->>S: Accepted
+ E->>C: ID, hash and payload
+ C->>D: Atomic inbox and effect transaction
+ D-->>C: Committed
+ C--xE: Final receipt lost
+ E->>C: Retry same ID and content
+ C->>D: Existing receipt; no second effect
+ C-->>E: Matching final receipt
+ E->>E: Remove pending; retain recovery archive
+ Note over E,C: Carrier custody is not destination commit

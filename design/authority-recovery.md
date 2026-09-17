@@ -1,0 +1,20 @@
+# Authority recovery and care outcomes
+
+## Local authority and offline access contract
+
+**Admission recovery policy:** no automatic promotion. The operations lead authorizes recovery and a platform/field operator executes a checklist. Stop automatic redemption, record the last known generation and committed sequence, and physically disconnect or disable the old host's power/network/switch port. Record the fence; inability to demonstrate isolation blocks promotion. Restore a journal that accounts for the latest acknowledged redemptions, including retained validator decision references. A backup whose completeness cannot be established does not qualify.
+
+The recovery operator advances the generation monotonically using the protected generation register; every enabled validator must persist the new generation and authority identity through authenticated local enrollment. The new authority is configured with an explicit allowlist of those updated validators. An unupdated validator remains outside automatic service. Requests and responses carry the generation and request ID; mismatches are rejected. Physical fencing and selective re-enrollment establish exclusivity—the generation number alone cannot stop an isolated former writer. If state completeness or fencing is uncertain, use logged staffed exceptions until reconciliation. One designated, provisioned exception desk controls manual admissions; disconnected lanes do not each invent an independent exception authority.
+
+| Trigger | Decision owner | Permitted operation | Condition for automatic recovery |
+|---|---|---|---|
+| WAN lost, local admission LAN intact | Operations lead | Existing local authority redeems; synchronize later | Restore authenticated cloud link and reconcile |
+| Gate loses local authority connection | Entrance supervisor | Route visitors to reachable lanes or the designated exception desk | Gate reaches enrolled authority at matching generation |
+| Primary host fails | Operations lead + recovery operator | Pause automated redemption; staffed exceptions | Fence old host, establish complete journal, advance generation, enroll validators |
+| Journal incomplete or fence unverified | Operations lead | Exception desk only; preserve evidence | Reconcile outstanding decisions; do not guess remaining ticket allowances |
+| Offline capture grant expires | Animal-care lead / shift supervisor | Paper/manual observations and independent emergency procedures | Current authority renews the grant or accepts attributed transcription |
+| Offline draft arrives after staff revocation | Animal-care lead | Quarantine as unverified evidence; preserve original author/time | Qualified review reconciles it; no automatic care task or approval |
+
+**Capture access:** issue device-bound, capture-only grants for at most 12 hours, renewed while connected; no offline renewal or grace period. Restart without trustworthy expiry enforcement fails closed for digital capture. Grants permit drafts only; no clinical approval or execution authorization. The 72-hour summary buffer does not imply 72 hours of authenticated staff access. After expiry, staff use manual records, later transcribed with occurrence time, transcription time, author and provenance. A stolen device may retain capture access until expiry; device locking and restricted scope limit the exposure. Reconnection revalidates actor, grant, evidence and occurrence time; uncertain drafts remain quarantined rather than silently erased.
+
+**Care outcome contract:** task approval authorizes a specific action against a current version. At action start the software rechecks it and records an action attempt ID. Staff report completion, failure, or an unknown outcome separately. Repeated reports with the same attempt ID do not create another record. The software cannot make a human physical action idempotent. Never automatically repeat an action whose physical outcome is unknown; a qualified person reconciles it. Emergency action follows established local procedures and is recorded retrospectively with provenance where necessary.

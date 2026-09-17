@@ -1,0 +1,18 @@
+stateDiagram-v2
+ [*] --> ObservationDraft
+ ObservationDraft --> PendingReview: Connected validation
+ PendingReview --> Approved: Qualified scoped approval
+ PendingReview --> Rejected: Reason recorded
+ Approved --> Invalidated: Evidence changed or approval expired
+ Invalidated --> PendingReview: Re-review
+ Approved --> AttemptAuthorized: Recheck role, version and expiry
+ AttemptAuthorized --> ReportedCompleted: Staff reports completion
+ AttemptAuthorized --> ReportedFailed: Staff reports failure
+ AttemptAuthorized --> OutcomeUnknown: Outcome uncertain
+ OutcomeUnknown --> Reconciliation: Qualified review before a new action
+ note right of ObservationDraft
+ Offline capture only while grant valid
+ end
+ note right of OutcomeUnknown
+ No automatic physical retry
+ end

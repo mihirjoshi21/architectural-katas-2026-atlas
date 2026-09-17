@@ -1,0 +1,21 @@
+flowchart TB
+ subgraph Local["Estate local network"]
+ A["Admission authority"]
+ E["Edge runtime and capture-only kiosk"]
+ end
+ UI["Web clients"]
+ subgraph Cloud["Application services"]
+ C["Estate application"]
+ I["Ingestion worker"] -->|"Atomic inbox and effect"| DB[("PostgreSQL")]
+ C -->|"Transactions"| DB
+ C -->|"Read-only AI request"| AI["AI adapter"]
+ DB --> R["Reporting worker"]
+ end
+ UI -->|"HTTPS"| C
+ E -->|"Batches and receipts"| I
+ A -->|"Admission synchronization"| C
+ C -->|"Issue and reconcile"| P["Ticket and payment supplier"]
+ R --> O[("Object storage")]
+ AI -->|"Scoped read APIs"| C
+ AI -->|"Approved knowledge read"| O
+ AI -->|"Bounded provider call"| M["Model provider"]
