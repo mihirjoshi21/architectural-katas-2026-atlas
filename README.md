@@ -10,6 +10,10 @@
 | Trenton Jones | Architect | [LinkedIn](https://www.linkedin.com/in/trentonjones/) |
 | Kyle Eckert | Senior Product Manager | [LinkedIn](https://www.linkedin.com/in/kyle-eckert96/) |
 
+## Final submission video
+
+▶️ **[Watch the ATLAS final submission video (Atlas.mp4)](Atlas.mp4)**
+
 ## Executive overview
 
 The Countess needs an estate that can serve more visitors while making better decisions about its rides, animals and staff. Tickets and family passes must work at the entrance. Keepers need dependable feeding, health and population records. Managers need to know which parts of the estate are popular, and visitors need useful information that encourages a return visit. Patchy Wi-Fi makes a cloud-only solution a poor starting point.
